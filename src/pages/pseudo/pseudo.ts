@@ -29,6 +29,7 @@ export class PseudoPage {
     this.navCtrl.push(QuizzSettingsPage, {
       nickname: this.nickname
     });
+    console.log("envoi du pseudo "+ this.nickname +" vers la page de settings");
   }
 
 }

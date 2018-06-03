@@ -16,12 +16,21 @@
 <ion-content padding>
 
 
-    <ion-item>
-        <ion-card></ion-card>
-      <ion-label floating>Entrez votre pseudo</ion-label>
-      <ion-input type="text" [(ngModel)]="nickname"></ion-input>
-    </ion-item>
-    <button ion-button block (click)="sendNickname(nickname)">Valider</button>
+  <ion-card>
+    <img src="assets/imgs/images.jpeg"/>
+    <ion-card-content>
 
 
+  <ion-item>
+    <ion-card></ion-card>
+    <ion-label floating>Votre nom</ion-label>
+    <ion-input type="text" [(ngModel)]="nickname"></ion-input>
+  </ion-item>
+<br>
+
+  <button ion-button block *ngIf="(nickname)" (click)="sendNickname(nickname)">Valider</button>
+  <button ion-button block *ngIf="(!nickname)" (click)="disable"> Entrez votre pseudo !</button>
+
+</ion-card-content>
+</ion-card>
 </ion-content>
