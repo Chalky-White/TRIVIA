@@ -6,6 +6,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { TitleHeaderPageModule} from '../pages/title-header/title-header.module';
+import { TitleHeaderPage} from '../pages/title-header/title-header';
+import { PseudoPageModule } from '../pages/pseudo/pseudo.module';
+import { PseudoPage } from '../pages/pseudo/pseudo';
 
 @NgModule({
   declarations: [
@@ -14,12 +18,16 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     BrowserModule,
+    TitleHeaderPageModule,
+    PseudoPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    TitleHeaderPage,
+    PseudoPage
   ],
   providers: [
     StatusBar,
