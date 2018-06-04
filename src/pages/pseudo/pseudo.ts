@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { QuizzSettingsPage } from '../quizz-settings/quizz-settings';
+import { LoadingController } from 'ionic-angular';
 
 /**
  * Generated class for the PseudoPage page.
@@ -18,7 +19,8 @@ export class PseudoPage {
 
   public nickname : string = "";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
@@ -30,6 +32,14 @@ export class PseudoPage {
       nickname: this.nickname
     });
     console.log("envoi du pseudo "+ this.nickname +" vers la page de settings");
+  }
+
+  presentLoading() {
+    const loader = this.loadingCtrl.create({
+      content: "Please wait...",
+      duration: 500
+    });
+    loader.present();
   }
 
 }

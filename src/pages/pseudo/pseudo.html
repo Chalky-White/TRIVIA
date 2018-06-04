@@ -28,7 +28,7 @@
   </ion-item>
 <br>
 
-  <button ion-button block *ngIf="(nickname)" (click)="sendNickname(nickname)">Valider</button>
+  <button ion-button block *ngIf="(nickname)" (click)="sendNickname(nickname); presentLoading()">Valider</button>
   <button ion-button block *ngIf="(!nickname)" (click)="disable"> Entrez votre pseudo !</button>
 
 </ion-card-content>

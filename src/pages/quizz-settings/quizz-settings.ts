@@ -35,10 +35,13 @@ import { PseudoPage } from '../pseudo/pseudo'
 // }
 export class QuizzSettingsPage {
 
+  public nickname : string = "";
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
+    this.nickname = this.navParams.get("nickname");
     console.log('ionViewDidLoad QuizzSettingsPage');
   }
 

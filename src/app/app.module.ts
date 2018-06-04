@@ -12,7 +12,7 @@ import { TitleHeaderPageModule} from '../pages/title-header/title-header.module'
 import { TitleHeaderPage} from '../pages/title-header/title-header';
 import { PseudoPageModule } from '../pages/pseudo/pseudo.module';
 import { PseudoPage } from '../pages/pseudo/pseudo';
-import { QuizzSettingsPage, DataService } from '../pages/quizz-settings/quizz-settings';
+import { QuizzSettingsPage } from '../pages/quizz-settings/quizz-settings';
 import { QuizzSettingsPageModule } from '../pages/quizz-settings/quizz-settings.module';
 
 
